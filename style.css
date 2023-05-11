@@ -1,0 +1,328 @@
+/* Polices d'écriture */
+@font-face {
+    font-family: 'MotivaSansBold';
+    src: url('./fonts/MotivaSansBold.ttf');
+}
+
+@font-face {
+    font-family: 'MotivaSansMedium';
+    src: url('./fonts/MotivaSansMedium.ttf');
+}
+
+@font-face {
+    font-family: 'MotivaSansRegular';
+    src: url('./fonts/MotivaSansRegular.ttf');
+}
+
+/* Variables */
+:root {
+    --color-primary-text: #322e2e;
+    --color-secondary-text: #6a6666;
+    --color-highlight: #7D5BA6;
+    --color-primary-bg: rgb(252, 252, 252);
+    --color-border: rgb(215, 215, 215);
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background-color: var(--color-primary-bg);
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    border-bottom: 1px solid var(--color-border);
+    padding: 0 30px;
+    background-color: var(--color-primary-bg);
+    height: 100px;
+    top: 0;
+}
+
+nav p {
+    font-family: 'MotivaSansBold';
+    font-size: 1.5rem;
+    color: var(--color-primary-text);
+}
+
+nav .links {
+    display: none;
+}
+
+.burger {
+    background-color: rgb(215, 215, 215);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Bannière de la page */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(125,91,166);
+    background: linear-gradient(65deg, rgba(125,91,166,1) 50%, rgba(252,252,252,1) 100%);
+    height: 500px;
+    margin-top: 100px;
+    gap: 30px;
+}
+
+header h1 {
+    font-family: 'MotivaSansBold';
+    font-size: 3rem;
+}
+
+header .please-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    background-color: rgba(255, 255, 255, 0.211);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+header .please-scroll i {
+    font-size: 1.5rem;
+}
+
+/* Contenu de la page */
+main {
+    padding: 0 30px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+main h1 {
+    font-family: 'MotivaSansBold';
+    font-size: 2rem;
+    color: var(--color-primary-text);
+    margin: 50px 0;
+}
+
+main h2 {
+    font-family: 'MotivaSansMedium';
+    font-size: 1.5rem;
+    color: var(--color-primary-text);
+    margin: 50px 0;
+}
+
+main h3 {
+    font-family: 'MotivaSansMedium';
+    font-size: 1.2rem;
+    color: var(--color-primary-text);
+    margin: 50px 0;
+}
+
+main p {
+    font-family: 'MotivaSansRegular';
+    font-size: 1rem;
+    color: var(--color-secondary-text);
+    margin: 50px 0;
+}
+
+main a {
+    font-family: 'MotivaSansRegular';
+    font-size: 1rem;
+    color: var(--color-highlight);
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+/* Pied de page */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Partie haute du footer */
+.footer-content {
+    background-color: var(--color-primary-bg);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px;
+    border-bottom: 1px solid var(--color-border);
+    transition: all 0.3s ease-in-out;
+}
+
+.footer li {
+    list-style: none;
+    margin-bottom: 7.5px;
+}
+
+.footer h3, .footer h2 {
+    font-family: 'MotivaSansMedium';
+    font-size: 1rem;
+    color: var(--color-secondary-text);
+    margin-bottom: 12.5px;
+}
+
+.footer h2 {
+    font-size: 1.2rem;
+    color: var(--color-primary-text);
+}
+
+.footer p, .footer a {
+    font-family: 'MotivaSansRegular';
+    color: var(--color-primary-text);
+    text-decoration: none;
+}
+
+
+/* Colonnes du footer */
+.footer-col {
+    width: 100%;
+}
+
+/* Réseaux sociaux */
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+.socials li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(215, 215, 215);
+    font-size: 1.5rem;
+    height: 40px;
+    width: 40px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* Github */
+.socials li:nth-child(1):hover {
+    background-color: #322e2e;
+    color: white;
+}
+
+/* Linkedin */
+.socials li:nth-child(2):hover {
+    background-color: #5e5ace;
+    color: white;
+}
+
+/* Mail */
+.socials li:nth-child(3):hover {
+    background-color: #f5af38;
+    color: white;
+}
+
+/* Crédits du footer */
+.footer-credits {
+    padding: 25px 0;
+}
+
+.footer-credits span {
+    color: var(--color-highlight);
+    font-family: 'MotivaSansBold';
+}
+
+/* Responsive ordinateur */
+@media screen and (min-width: 1000px) {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 150px;
+        height: 150px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav p {
+        font-family: 'MotivaSansBold';
+        font-size: 1.5rem;
+        color: var(--color-primary-text);
+    }
+
+    nav .links {
+        display: flex;
+        align-items: center;
+    }
+    
+    nav .links li {
+        list-style: none;
+        margin-left: 15px;
+    }
+
+    nav .links li a {
+        font-family: 'MotivaSansRegular';
+        color: var(--color-primary-text);
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 20px;
+    }
+
+    nav .links li .active {
+        color: var(--color-highlight);
+        font-weight: bold;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .cta-btn {
+        padding: 10px 5px;
+        background-color: var(--color-highlight);
+        border-bottom: 5px solid #5c437b;
+        border-radius: 10px;
+    }
+
+    .cta-btn:hover {
+        background-color: var(--color-highlight);
+        border-bottom: 2.5px solid #5c437b;
+    }
+
+    .scrolled {
+        height: 100px;
+    }
+
+    header {
+        margin-top: 150px;
+    }
+
+    main {
+        padding: 0 150px;
+    }
+    
+    .footer-content {
+        padding: 50px 150px;
+        flex-direction: row;
+    }
+    
+    .footer-col {
+        width: 50%;
+    }
+
+    .footer-col:nth-child(1) {
+        width: 100%;
+    }
+    
+}
